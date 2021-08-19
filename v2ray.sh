@@ -22,9 +22,19 @@ cat << EOF > /etc/config.json
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      }
     }
-  ]
+  ],
+  "dns": {
+      "servers": [
+          "1.1.1.1",
+          "8.8.8.8",
+          "localhost"
+      ]
+  }
 }		
 EOF
 
